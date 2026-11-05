@@ -342,6 +342,17 @@ section,header,footer,main{min-width:0}
 @media(max-width:860px){.hero-featured{width:100%;max-width:560px;order:-1}.hero-player-shell .yt{aspect-ratio:16/9}}
 @media(max-width:520px){.hero-featured-card{padding:10px;border-radius:16px;gap:10px}.hero-player-shell{border-radius:10px}.hero-view-more{width:100%;border-radius:10px}}
 
+
+
+/* COMPLETE EPISODE SECTION — ONE CONTINUOUS CARD */
+#watch>.watch-content-card{display:block;overflow:hidden;width:100%;padding:clamp(18px,2.8vw,30px);border:1px solid rgba(232,201,161,.22);border-radius:22px;background:var(--panel);box-shadow:0 18px 48px rgba(0,0,0,.16)}
+#watch>.watch-content-card>.sec-head{margin:0 0 clamp(24px,3.5vw,36px);padding:0;border:0;background:transparent}
+#watch>.watch-content-card>.home-episode-preview{margin:0;padding:0;background:transparent}
+#watch>.watch-content-card .home-episode-grid{margin:0}
+#watch>.watch-content-card .view-all-episodes{margin-bottom:0}
+#watch>.watch-content-card>.apple-archive{margin:clamp(22px,3vw,30px) 0 0;padding:clamp(18px,2.5vw,26px) 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+#watch>.watch-content-card>.apple-archive .apple-embed{width:100%;height:450px!important;min-height:450px;flex:0 0 450px;border-radius:14px}
+@media(max-width:600px){#watch>.watch-content-card{padding:14px;border-radius:16px}#watch>.watch-content-card>.sec-head{margin-bottom:22px}#watch>.watch-content-card>.apple-archive{margin-top:22px;padding-top:16px}#watch>.watch-content-card>.apple-archive .apple-embed{height:450px!important;min-height:450px;flex-basis:450px}}
 </style>
 </head>
 <body>
@@ -537,10 +548,3 @@ section,header,footer,main{min-width:0}
 .watch-content-card .apple-archive{margin:0;padding:clamp(16px,2.5vw,26px);border:0;border-top:1px solid var(--line);border-radius:0;gap:14px;background:transparent}
 .watch-content-card .apple-embed{height:450px!important;min-height:450px;flex:0 0 450px;border-radius:14px}
 @media(max-width:600px){.watch-content-card{border-radius:16px}.watch-content-card .home-episode-preview,.watch-content-card .apple-archive{padding:14px}.watch-content-card .apple-embed{height:450px!important;min-height:450px;flex-basis:450px}}
-
-/* KEEP THE COMPLETE EPISODE INTRO INSIDE ITS CARD */
-.watch-content-card{padding:clamp(16px,2.5vw,26px)}
-.watch-content-card>.sec-head{margin-bottom:clamp(24px,3.5vw,36px)}
-.watch-content-card .home-episode-preview{padding:0}
-.watch-content-card .apple-archive{margin-inline:calc(-1 * clamp(16px,2.5vw,26px));margin-bottom:calc(-1 * clamp(16px,2.5vw,26px));}
-@media(max-width:600px){.watch-content-card{padding:14px}.watch-content-card>.sec-head{margin-bottom:22px}.watch-content-card .home-episode-preview{padding:0}.watch-content-card .apple-archive{margin-inline:-14px;margin-bottom:-14px}}
