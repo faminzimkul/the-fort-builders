@@ -301,6 +301,21 @@ section,header,footer,main{min-width:0}
 .follow-logos .platform-logo{width:clamp(112px,14vw,150px);height:42px;opacity:.88}\n.follow-logos .platform-logo img{filter:grayscale(1) contrast(1.15);object-fit:contain;transform:scale(1.06)}
 @media(max-width:600px){.follow-logos{gap:8px}.follow-logos .platform-logo{width:105px;height:36px}.follow-logos .logo-track{gap:26px;animation-duration:65s}}
 
+
+/* HOMEPAGE EPISODE PREVIEW */
+.home-episode-preview{margin-top:22px}
+.home-episode-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.home-episode-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:15px;background:var(--panel);text-decoration:none;color:var(--cream);transition:border-color .2s,transform .2s}
+.home-episode-card:hover{border-color:var(--sand);transform:translateY(-2px)}
+.home-episode-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--deep)}
+.home-episode-card>span{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px}
+.home-episode-card b{font-size:11px;letter-spacing:.12em;color:var(--sand)}
+.home-episode-card em{font-size:11px;font-style:normal;color:var(--muted-2)}
+.view-all-episodes{display:flex;align-items:center;justify-content:center;gap:12px;width:max-content;margin:20px auto 0;padding:13px 24px;border:1px solid var(--line);border-radius:999px;color:var(--cream);text-decoration:none;font-weight:700;transition:background .2s,border-color .2s}
+.view-all-episodes:hover{background:var(--panel);border-color:var(--sand)}
+.view-all-episodes span{color:var(--sand)}
+@media(max-width:600px){.home-episode-grid{grid-template-columns:1fr;gap:12px}.home-episode-card{display:grid;grid-template-columns:42% 1fr;align-items:center}.home-episode-card img{height:100%;min-height:94px;aspect-ratio:unset}.home-episode-card>span{flex-direction:column;align-items:flex-start;justify-content:center;padding:12px}.view-all-episodes{width:100%}}
+
 </style>
 </head>
 <body>
@@ -367,16 +382,14 @@ section,header,footer,main{min-width:0}
     </div>
     <div class="player-meta"><span><b>Full playlist:</b> browse and select every available YouTube episode from the playlist controls.</span><span>Browse the official Apple episode archive below.</span></div>
   </div>
-  <details class="all-episodes">
-    <summary><span>All YouTube episodes</span><span class="episode-toggle" aria-hidden="true">＋</span></summary>
-    <div class="all-episodes-content">
-      <p>Open the complete official YouTube playlist below. Use the playlist control in the player to select any available episode.</p>
-      <div class="all-episodes-player">
-        <iframe title="The Fort Builders — complete YouTube playlist and episode selector" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe&index=1&rel=0&modestbranding=1&playsinline=1" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      </div>
-      <a class="btn btn-sand all-episodes-link" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">Open playlist on YouTube ↗</a>
+  <div class="home-episode-preview">
+    <div class="home-episode-grid">
+    <a class="home-episode-card" href="https://www.youtube.com/watch?v=n-X6BQSR7rg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/n-X6BQSR7rg/hqdefault.jpg" alt="Episode 001 thumbnail" loading="lazy"><span><b>EPISODE 001</b><em>Watch on YouTube ↗</em></span></a>
+    <a class="home-episode-card" href="https://www.youtube.com/watch?v=WgykD3xvaMo" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/WgykD3xvaMo/hqdefault.jpg" alt="Episode 002 thumbnail" loading="lazy"><span><b>EPISODE 002</b><em>Watch on YouTube ↗</em></span></a>
+    <a class="home-episode-card" href="https://www.youtube.com/watch?v=mtRo-HTjO5c" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/mtRo-HTjO5c/hqdefault.jpg" alt="Episode 003 thumbnail" loading="lazy"><span><b>EPISODE 003</b><em>Watch on YouTube ↗</em></span></a>
     </div>
-  </details>
+    <a class="view-all-episodes" href="episodes.html">View all episodes <span aria-hidden="true">→</span></a>
+  </div>
   <div class="apple-archive">
     <div class="apple-archive-heading">
       <h3>Listen on Apple Podcasts</h3>
