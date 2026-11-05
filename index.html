@@ -292,6 +292,15 @@ section,header,footer,main{min-width:0}
 @media(max-width:600px){.platform-strip{padding:20px 0 22px}.platform-logo{width:138px;height:50px}.logo-track{gap:30px;animation-duration:25s}}
 @media(prefers-reduced-motion:reduce){.logo-track{animation:none}.logo-marquee{mask-image:none;-webkit-mask-image:none}}
 
+
+/* INLINE FOLLOW-ALONG LOGO SLIDER */
+.follow-logos{display:flex;flex-direction:column;align-items:stretch;gap:10px;width:100%;max-width:100%;overflow:hidden}
+.follow-logos>b{flex:0 0 auto}
+.follow-logos .logo-marquee{width:100%;max-width:100%;margin:0}
+.follow-logos .logo-track{gap:clamp(28px,4vw,48px);animation-duration:26s}
+.follow-logos .platform-logo{width:clamp(112px,14vw,150px);height:42px}
+@media(max-width:600px){.follow-logos{gap:8px}.follow-logos .platform-logo{width:105px;height:36px}.follow-logos .logo-track{gap:26px;animation-duration:22s}}
+
 </style>
 </head>
 <body>
@@ -320,37 +329,28 @@ section,header,footer,main{min-width:0}
       <a class="btn btn-sand" href="#watch" data-play><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg>Start watching</a>
       <a class="btn btn-ghost" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer">Listen on Apple</a>
     </div>
-    <div class="follow">
+    <div class="follow follow-logos">
       <b>Follow along</b>
-      <a href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
-      <a href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://www.linkedin.com/in/lance-johnson-p-e-67241ba/" target="_blank" rel="noopener noreferrer">Lance on LinkedIn</a>
-      <a href="https://www.facebook.com/share/1N8oM2Yo9o/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <div class="logo-marquee" role="region" aria-label="Podcast and social platforms">
+        <div class="logo-track">
+          <a class="platform-logo" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts"><img src="assets/brands/apple-podcasts.svg" alt="Apple Podcasts" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="assets/brands/youtube.svg" alt="YouTube" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.linkedin.com/in/lance-johnson-p-e-67241ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/brands/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.facebook.com/share/1N8oM2Yo9o/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/brands/facebook.svg" alt="Facebook" loading="lazy"></a>
+          <a class="platform-logo" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><img src="assets/brands/spotify.svg" alt="Spotify" loading="lazy"></a>
+          <a class="platform-logo" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts"><img src="assets/brands/apple-podcasts.svg" alt="Apple Podcasts" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="assets/brands/youtube.svg" alt="YouTube" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.linkedin.com/in/lance-johnson-p-e-67241ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/brands/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
+          <a class="platform-logo" href="https://www.facebook.com/share/1N8oM2Yo9o/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/brands/facebook.svg" alt="Facebook" loading="lazy"></a>
+          <a class="platform-logo" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><img src="assets/brands/spotify.svg" alt="Spotify" loading="lazy"></a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="hero-art">
     <svg class="chalk" viewBox="0 0 480 480" aria-hidden="true" fill="none" stroke="#E8C9A1" stroke-width="5" stroke-linecap="round"><path d="M22 30 C 140 26, 300 33, 430 27"/><path d="M28 18 C 24 160, 31 330, 26 462"/><path d="M14 452 C 160 456, 320 449, 462 455"/><path d="M452 466 C 455 360, 449 250, 454 150"/></svg>
     <div class="cover"><span class="t1">THE</span><span class="t2">FORT<br>BUILDERS</span><span class="t3">How we become who we are</span></div>
     <div class="badge"><b>TFB</b><span>Full episode archive</span></div>
-  </div>
-</section>
-<section class="platform-strip" aria-label="Listen and follow The Fort Builders">
-  <div class="wrap platform-wrap">
-    <p class="eyebrow">Listen &amp; follow</p>
-    <div class="logo-marquee" role="region" aria-label="Podcast and social platforms">
-      <div class="logo-track">
-        <a class="platform-logo" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts"><img src="assets/brands/apple-podcasts.svg" alt="Apple Podcasts" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="assets/brands/youtube.svg" alt="YouTube" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.linkedin.com/in/lance-johnson-p-e-67241ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/brands/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/brands/facebook.svg" alt="Facebook" loading="lazy"></a>
-        <a class="platform-logo" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><img src="assets/brands/spotify.svg" alt="Spotify" loading="lazy"></a>
-        <a class="platform-logo" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts"><img src="assets/brands/apple-podcasts.svg" alt="Apple Podcasts" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="assets/brands/youtube.svg" alt="YouTube" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.linkedin.com/in/lance-johnson-p-e-67241ba/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/brands/linkedin.svg" alt="LinkedIn" loading="lazy"></a>
-        <a class="platform-logo" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="assets/brands/facebook.svg" alt="Facebook" loading="lazy"></a>
-        <a class="platform-logo" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><img src="assets/brands/spotify.svg" alt="Spotify" loading="lazy"></a>
-      </div>
-    </div>
   </div>
 </section>
 <section class="motto" aria-label="Our motto"><div class="wrap"><span>Be Curious.</span><i aria-hidden="true">◆</i><span>Be Grateful.</span></div></section>
