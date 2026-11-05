@@ -52,7 +52,7 @@ h2{font-size:clamp(36px,6vw,60px)}p{margin:0}
 /* HERO */
 .hero{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:clamp(40px,6vw,64px);padding-block:clamp(56px,9vw,96px) clamp(56px,8vw,88px)}
 .hero h1{font-size:clamp(48px,8.5vw,96px);line-height:.98;letter-spacing:-.01em;margin:22px 0 24px}.hero h1 em{color:var(--sand)}
-.hero .lead{max-width:540px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero .lead{max-width:540px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;align-items:center}.cta-row .btn{flex:0 0 auto;min-height:52px;height:auto;white-space:normal}
 .follow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:28px;font-size:14px;color:var(--muted-2)}
 .follow b{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 .follow a{color:var(--cream);text-decoration:none}.follow a:hover{color:var(--sand)}
@@ -142,7 +142,7 @@ footer .l{display:flex;align-items:center;gap:12px}footer nav{display:flex;flex-
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 
 /* RESPONSIVE REFINEMENT */
-html,body{width:100%;max-width:100%;overflow-x:clip}
+html,body{width:100%;max-width:100%;overflow-x:clip}html{scroll-padding-top:100px}
 .wrap{width:100%;min-width:0}
 section,header,footer,main{min-width:0}
 .hero>div,.host-copy,.host-art,.split>div,.cta-card>div{min-width:0}
@@ -155,7 +155,7 @@ section,header,footer,main{min-width:0}
   :root{--pad:clamp(18px,5vw,26px);--section:clamp(54px,12vw,78px)}
   .nav{padding-block:10px}
   .brand strong{font-size:22px}
-  .hero{padding-block:42px 58px;gap:34px}
+  .hero{padding:58px 0 58px;gap:34px;scroll-margin-top:100px}
   .hero-art{width:min(100%,360px);max-width:360px}
   .hero h1{font-size:clamp(48px,12vw,76px);overflow-wrap:normal}
   .hero .lead{max-width: none}
@@ -182,12 +182,12 @@ section,header,footer,main{min-width:0}
   .brand svg{width:34px;height:34px;flex:0 0 auto}
   .brand strong{font-size:20px}
   .nav-links{padding-inline:18px}
-  .hero{padding-top:32px}
+  .hero{padding-top:52px}
   .hero-art{width:min(100%,310px)}
   .hero h1{font-size:clamp(44px,13vw,64px);margin:16px 0 18px}
-  .cta-row{flex-direction:column}
+  .cta-row{flex-direction:column;align-items:stretch}.cta-row .btn{flex:0 0 auto;width:100%;min-height:58px;height:auto;padding:14px 20px}
   .cta-row .btn{width:100%}
-  .follow{font-size:13px;gap:10px 14px}
+  .follow{font-size:13px;gap:10px 14px;max-width:100%;align-items:center}.follow a{white-space:normal}.follow b{flex-basis:100%}
   .motto .wrap{padding-block:20px}
   .sec-head{gap:12px}
   .sec-head h2{font-size:clamp(34px,10vw,46px)}
@@ -264,13 +264,14 @@ section,header,footer,main{min-width:0}
   <div class="sec-head"><div><p class="eyebrow">Every episode</p><h2>Stories worth sitting with</h2></div><a class="more" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">View playlist on YouTube →</a></div>
   <div class="player-shell">
     <div class="yt" id="player">
-      <button class="yt-poster" type="button" aria-label="Play The Fort Builders podcast playlist">
+      <button class="yt-poster" type="button" aria-label="Play The Fort Builders podcast playlist" hidden>
         <svg class="frame" viewBox="0 0 160 90" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="#E8C9A1" stroke-width=".8" stroke-linecap="round"><path d="M2 3 C 50 2, 110 4, 150 2.5"/><path d="M3 1.5 C 2.5 30, 3.5 60, 2.6 88"/><path d="M1.5 87 C 50 88, 110 86.5, 158 87.5"/><path d="M157 88.5 C 157.5 60, 156.5 40, 157.2 28"/></svg>
         <span class="play"><svg width="30" height="30" viewBox="0 0 16 16" aria-hidden="true" fill="#262439"><path d="M4.5 2.5 L13 8 L4.5 13.5 Z"/></svg></span>
         <span class="label"><small id="poster-kicker">Official YouTube playlist</small><strong id="poster-title">The Fort Builders — Full Episodes</strong></span>
       </button>
+      <iframe title="The Fort Builders Podcast — complete YouTube episode playlist" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe&rel=0&modestbranding=1&playsinline=1" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
-    <div class="player-meta"><span><b>Tip:</b> use the playlist icon in the player to jump to any episode.</span><span>Browse the official Apple episode archive below.</span></div>
+    <div class="player-meta"><span><b>Full playlist:</b> browse and select every available YouTube episode from the playlist controls.</span><span>Browse the official Apple episode archive below.</span></div>
   </div>
   <div class="ep-grid" style="grid-template-columns:1fr">
     <div class="ep" style="cursor:default"><span class="num">01–21</span><span class="txt"><small>OFFICIAL AUDIO ARCHIVE</small><strong>Every published episode, in release order</strong><span>Browse the complete show archive on Apple Podcasts. The embedded archive is maintained by the podcast publisher.</span></span><a class="btn btn-sand" style="margin-left:auto;flex-shrink:0" href="https://podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" target="_blank" rel="noopener noreferrer">Open archive ↗</a></div>
