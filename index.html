@@ -242,12 +242,40 @@ section,header,footer,main{min-width:0}
 }
 
 
-/* RESTORED OFFICIAL APPLE PODCAST EMBED */
-.apple-archive{margin-top:26px;padding:20px;border:1px solid rgba(232,201,161,.18);border-radius:18px;background:var(--panel)}
-.apple-archive-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+/* APPLE PODCAST EMBED — CONTENT-LED FLEX LAYOUT */
+.apple-archive{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:10px;
+  width:100%;
+  min-width:0;
+  margin-top:18px;
+  padding:14px 14px 8px;
+  border:1px solid rgba(232,201,161,.18);
+  border-radius:18px;
+  background:var(--panel);
+}
+.apple-archive-heading{display:flex;align-items:center;justify-content:flex-start;min-width:0;margin:0}
 .apple-archive-heading h3{font-size:clamp(25px,3vw,32px);color:var(--cream)}
-.apple-embed{display:block;width:100%;height:250px!important;max-width:100%;border:0;border-radius:14px;background:var(--panel)}
-@media(max-width:520px){.apple-archive{padding:12px;margin-top:18px}.apple-embed{height:250px!important}}
+.apple-embed{
+  display:block;
+  flex:0 1 auto;
+  align-self:stretch;
+  width:100%;
+  min-width:0;
+  height:225px;
+  max-width:100%;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:14px;
+  background:var(--panel);
+}
+@media(max-width:520px){
+  .apple-archive{gap:8px;margin-top:16px;padding:12px 12px 4px}
+  .apple-embed{height:220px}
+}
 
 </style>
 </head>
@@ -319,7 +347,7 @@ section,header,footer,main{min-width:0}
     <div class="apple-archive-heading">
       <h3>Listen on Apple Podcasts</h3>
     </div>
-    <iframe class="apple-embed" title="The Fort Builders Podcast — official Apple Podcasts embed" src="https://embed.podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" width="100%" height="250" frameborder="0" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" loading="lazy"></iframe>
+    <iframe class="apple-embed" title="The Fort Builders Podcast — official Apple Podcasts embed" src="https://embed.podcasts.apple.com/us/podcast/the-fort-builders-podcast/id1879344033" width="100%" height="220" frameborder="0" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" loading="lazy"></iframe>
   </div>
 </section>
 <section id="host" class="wrap section host">
