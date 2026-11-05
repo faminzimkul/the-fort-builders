@@ -406,8 +406,8 @@ section,header,footer,main{min-width:0}
 </section>
 <section class="motto" aria-label="Our motto"><div class="wrap"><span>Be Curious.</span><i aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 0 10 6 16 8 10 10 8 16 6 10 0 8 6 6z"/></svg></i><span>Be Grateful.</span></div></section>
 <section id="watch" class="wrap section">
-  <div class="sec-head"><div><p class="eyebrow">Every episode</p><h2>Stories worth sitting with</h2></div><a class="more" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">View playlist on YouTube <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
   <div class="watch-content-card">
+  <div class="sec-head"><div><p class="eyebrow">Every episode</p><h2>Stories worth sitting with</h2></div><a class="more" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">View playlist on YouTube <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
   <div class="home-episode-preview">
     <div class="home-episode-grid">
     <a class="home-episode-card" href="https://www.youtube.com/watch?v=n-X6BQSR7rg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/n-X6BQSR7rg/hqdefault.jpg" alt="Episode 001 thumbnail" loading="lazy"><span><b>EPISODE 001</b><em>Watch on YouTube</em></span></a>
@@ -537,3 +537,10 @@ section,header,footer,main{min-width:0}
 .watch-content-card .apple-archive{margin:0;padding:clamp(16px,2.5vw,26px);border:0;border-top:1px solid var(--line);border-radius:0;gap:14px;background:transparent}
 .watch-content-card .apple-embed{height:450px!important;min-height:450px;flex:0 0 450px;border-radius:14px}
 @media(max-width:600px){.watch-content-card{border-radius:16px}.watch-content-card .home-episode-preview,.watch-content-card .apple-archive{padding:14px}.watch-content-card .apple-embed{height:450px!important;min-height:450px;flex-basis:450px}}
+
+/* KEEP THE COMPLETE EPISODE INTRO INSIDE ITS CARD */
+.watch-content-card{padding:clamp(16px,2.5vw,26px)}
+.watch-content-card>.sec-head{margin-bottom:clamp(24px,3.5vw,36px)}
+.watch-content-card .home-episode-preview{padding:0}
+.watch-content-card .apple-archive{margin-inline:calc(-1 * clamp(16px,2.5vw,26px));margin-bottom:calc(-1 * clamp(16px,2.5vw,26px));}
+@media(max-width:600px){.watch-content-card{padding:14px}.watch-content-card>.sec-head{margin-bottom:22px}.watch-content-card .home-episode-preview{padding:0}.watch-content-card .apple-archive{margin-inline:-14px;margin-bottom:-14px}}
