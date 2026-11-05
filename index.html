@@ -329,6 +329,17 @@ section,header,footer,main{min-width:0}
 .motto i{display:inline-flex;align-items:center;justify-content:center}
 @media(max-width:600px){.episode-showcase{border-radius:16px}.episode-showcase .home-episode-preview{padding:14px}.episode-showcase .home-episode-grid{grid-template-columns:1fr}}
 
+
+/* FEATURED EPISODE PLAYER IN HERO */
+.hero-featured{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;max-width:560px;aspect-ratio:auto;justify-self:center}
+.hero-player-shell{width:100%;border-radius:20px;box-shadow:0 22px 60px rgba(0,0,0,.24)}
+.hero-player-shell .yt{aspect-ratio:16/10}
+.hero-view-more{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--cream);font-size:13px;font-weight:700;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.hero-view-more:hover{background:var(--panel-2);border-color:var(--sand);transform:translateY(2px);color:var(--cream)}
+#watch{scroll-margin-top:100px}
+@media(max-width:860px){.hero-featured{width:100%;max-width:560px;order:-1}.hero-player-shell .yt{aspect-ratio:16/9}}
+@media(max-width:520px){.hero-featured{gap:12px}.hero-player-shell{border-radius:15px}.hero-view-more{width:100%}}
+
 </style>
 </head>
 <body>
@@ -375,27 +386,23 @@ section,header,footer,main{min-width:0}
       </div>
     </div>
   </div>
-  <div class="hero-art">
-    <svg class="chalk" viewBox="0 0 480 480" aria-hidden="true" fill="none" stroke="#E8C9A1" stroke-width="5" stroke-linecap="round"><path d="M22 30 C 140 26, 300 33, 430 27"/><path d="M28 18 C 24 160, 31 330, 26 462"/><path d="M14 452 C 160 456, 320 449, 462 455"/><path d="M452 466 C 455 360, 449 250, 454 150"/></svg>
-    <div class="cover"><span class="t1">THE</span><span class="t2">FORT<br>BUILDERS</span><span class="t3">How we become who we are</span></div>
-    <div class="badge"><b>TFB</b><span>Full episode archive</span></div>
+  <div class="hero-art hero-featured">
+    <div class="player-shell hero-player-shell">
+      <div class="yt" id="player">
+        <button class="yt-poster" type="button" aria-label="Play The Fort Builders podcast playlist" hidden>
+          <svg class="frame" viewBox="0 0 160 90" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="#E8C9A1" stroke-width=".8" stroke-linecap="round"><path d="M2 3 C 50 2, 110 4, 150 2.5"/><path d="M3 1.5 C 2.5 30, 3.5 60, 2.6 88"/><path d="M1.5 87 C 50 88, 110 86.5, 158 87.5"/><path d="M157 88.5 C 157.5 60, 156.5 40, 157.2 28"/></svg>
+          <span class="play"><svg width="30" height="30" viewBox="0 0 16 16" aria-hidden="true" fill="#262439"><path d="M4.5 2.5 L13 8 L4.5 13.5 Z"/></svg></span>
+          <span class="label"><small>Episode 000</small><strong>The Fort Builders — Full Episodes</strong></span>
+        </button>
+        <iframe title="The Fort Builders Podcast — featured YouTube playlist" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe&rel=0&modestbranding=1&playsinline=1" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+    <a class="hero-view-more" href="#watch">View more <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7 7 7 7-7"/></svg></a>
   </div>
 </section>
 <section class="motto" aria-label="Our motto"><div class="wrap"><span>Be Curious.</span><i aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 0 10 6 16 8 10 10 8 16 6 10 0 8 6 6z"/></svg></i><span>Be Grateful.</span></div></section>
 <section id="watch" class="wrap section">
   <div class="sec-head"><div><p class="eyebrow">Every episode</p><h2>Stories worth sitting with</h2></div><a class="more" href="https://www.youtube.com/playlist?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe" target="_blank" rel="noopener noreferrer">View playlist on YouTube <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
-  <div class="episode-showcase">
-  <div class="player-shell">
-    <div class="yt" id="player">
-      <button class="yt-poster" type="button" aria-label="Play The Fort Builders podcast playlist" hidden>
-        <svg class="frame" viewBox="0 0 160 90" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="#E8C9A1" stroke-width=".8" stroke-linecap="round"><path d="M2 3 C 50 2, 110 4, 150 2.5"/><path d="M3 1.5 C 2.5 30, 3.5 60, 2.6 88"/><path d="M1.5 87 C 50 88, 110 86.5, 158 87.5"/><path d="M157 88.5 C 157.5 60, 156.5 40, 157.2 28"/></svg>
-        <span class="play"><svg width="30" height="30" viewBox="0 0 16 16" aria-hidden="true" fill="#262439"><path d="M4.5 2.5 L13 8 L4.5 13.5 Z"/></svg></span>
-        <span class="label"><small id="poster-kicker">Official YouTube playlist</small><strong id="poster-title">The Fort Builders — Full Episodes</strong></span>
-      </button>
-      <iframe title="The Fort Builders Podcast — complete YouTube episode playlist" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLGlvCmHyKhAblDt9Zpn-CwTk0K4JAXOOe&rel=0&modestbranding=1&playsinline=1" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
-    <div class="player-meta"><span><b>Full playlist:</b> browse and select every available YouTube episode from the playlist controls.</span></div>
-  </div>
   <div class="home-episode-preview">
     <div class="home-episode-grid">
     <a class="home-episode-card" href="https://www.youtube.com/watch?v=n-X6BQSR7rg" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/n-X6BQSR7rg/hqdefault.jpg" alt="Episode 001 thumbnail" loading="lazy"><span><b>EPISODE 001</b><em>Watch on YouTube</em></span></a>
@@ -403,7 +410,6 @@ section,header,footer,main{min-width:0}
     <a class="home-episode-card" href="https://www.youtube.com/watch?v=mtRo-HTjO5c" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/mtRo-HTjO5c/hqdefault.jpg" alt="Episode 003 thumbnail" loading="lazy"><span><b>EPISODE 003</b><em>Watch on YouTube</em></span></a>
     </div>
     <a class="view-all-episodes" href="episodes.html">View all episodes <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
   </div>
   <div class="apple-archive">
     <div class="apple-archive-heading">
