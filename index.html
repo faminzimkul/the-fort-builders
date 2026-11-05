@@ -140,6 +140,83 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
 footer .l{display:flex;align-items:center;gap:12px}footer nav{display:flex;flex-wrap:wrap;gap:8px 24px}footer a{text-decoration:none}
 @media(max-width:600px){footer .wrap{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+
+/* RESPONSIVE REFINEMENT */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+.wrap{width:100%;min-width:0}
+section,header,footer,main{min-width:0}
+.hero>div,.host-copy,.host-art,.split>div,.cta-card>div{min-width:0}
+.player-shell,.ep-grid,.ep,.player-meta,.news .wrap{min-width:0;max-width:100%}
+.player-shell iframe{display:block;width:100%;max-width:100%}
+.ep{min-width:0}
+.ep .txt{overflow-wrap:anywhere}
+.ep .btn{white-space:nowrap}
+@media(max-width:760px){
+  :root{--pad:clamp(18px,5vw,26px);--section:clamp(54px,12vw,78px)}
+  .nav{padding-block:10px}
+  .brand strong{font-size:22px}
+  .hero{padding-block:42px 58px;gap:34px}
+  .hero-art{width:min(100%,360px);max-width:360px}
+  .hero h1{font-size:clamp(48px,12vw,76px);overflow-wrap:normal}
+  .hero .lead{max-width: none}
+  .cta-row{gap:10px}
+  .cta-row .btn{flex:1 1 180px}
+  .follow{gap:12px 18px}
+  .sec-head{align-items:flex-start}
+  .sec-head .more{min-height:36px}
+  .player-meta{align-items:flex-start;flex-direction:column}
+  .ep{align-items:flex-start;gap:14px;padding:16px}
+  .ep .num{width:58px;height:58px;font-size:25px}
+  .ep .txt strong{font-size:23px}
+  .ep-grid>.ep{flex-wrap:wrap}
+  .ep-grid>.ep>.btn{margin-left:72px!important}
+  .host{gap:34px}
+  .host-art{width:min(100%,290px)}
+  .cta-card{padding:30px 22px}
+  .news .wrap{padding-block:48px}
+  footer .wrap{padding-block:30px}
+}
+@media(max-width:520px){
+  .wrap{padding-inline:18px}
+  .brand{gap:8px}
+  .brand svg{width:34px;height:34px;flex:0 0 auto}
+  .brand strong{font-size:20px}
+  .nav-links{padding-inline:18px}
+  .hero{padding-top:32px}
+  .hero-art{width:min(100%,310px)}
+  .hero h1{font-size:clamp(44px,13vw,64px);margin:16px 0 18px}
+  .cta-row{flex-direction:column}
+  .cta-row .btn{width:100%}
+  .follow{font-size:13px;gap:10px 14px}
+  .motto .wrap{padding-block:20px}
+  .sec-head{gap:12px}
+  .sec-head h2{font-size:clamp(34px,10vw,46px)}
+  .sec-head .more{font-size:13px}
+  .yt{aspect-ratio:16/10}
+  .yt-poster .play{width:62px;height:62px}
+  .player-meta{font-size:12px;padding:14px}
+  .ep{gap:12px;padding:14px}
+  .ep .num{width:48px;height:48px;font-size:22px;border-radius:10px}
+  .ep .txt{flex:1 1 calc(100% - 60px)}
+  .ep .txt strong{font-size:21px}
+  .ep .txt span{font-size:13px}
+  .ep-grid>.ep>.btn{margin-left:60px!important;width:calc(100% - 60px);white-space:normal}
+  .player-shell:has(iframe[title*="Apple Podcasts"]) iframe{height:520px}
+  .host-art{width:min(100%,260px)}
+  .host-copy h2{font-size:46px}
+  .topic{padding:17px}
+  .topic strong{font-size:25px}
+  .cta-actions .addr{overflow-wrap:anywhere}
+  footer .l{align-items:flex-start}
+  footer nav{gap:12px 18px}
+}
+@media(max-width:360px){
+  .brand strong{font-size:18px}
+  .hero h1{font-size:43px}
+  .ep .txt strong{font-size:19px}
+  .ep-grid>.ep>.btn{margin-left:0!important;width:100%}
+}
+
 </style>
 </head>
 <body>
